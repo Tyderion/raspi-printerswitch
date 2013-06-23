@@ -26,7 +26,7 @@ case "$1" in
     killall check_archie.py
     ;;
   *)
-    echo "Usage: /etc/init.d/noip {start|stop}"
+    echo "Usage: /etc/init.d/checkarchie {start|stop}"
     exit 1
     ;;
 esac

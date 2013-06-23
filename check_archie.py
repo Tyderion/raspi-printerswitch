@@ -32,6 +32,7 @@ while (True):
   else:
     if printer_on:
       turn_off_printer()
+  time.sleep(10)
 
 
 

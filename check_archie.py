@@ -22,16 +22,16 @@ def turn_off_printer():
   printer_on = False
 
 
-
 printer_on = GPIO.Input(PIN)
-response = os.system("ping -c1 -W1 " + "archie")
-if response == 0:
-  if not printer_on:
-    turn_on_printer()
+while (true):
+  response = os.system("ping -c1 -W1 " + "archie")
+  if response == 0:
+    if not printer_on:
+      turn_on_printer()
 
-else:
-  if printer_on:
-    turn_off_printer()
+  else:
+    if printer_on:
+      turn_off_printer()
 
 
 

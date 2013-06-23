@@ -18,7 +18,7 @@ case "$1" in
   start)
     echo "Starting checkarchie"
     # run application you want to start
-    /home/pi/raspi-printerswitch/check_archie.py
+    /home/pi/raspi-printerswitch/check_archie.py &
     ;;
   stop)
     echo "Stopping checkarchie"

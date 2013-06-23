@@ -21,22 +21,17 @@ def turn_off_printer():
   GPIO.output(PIN, GPIO.LOW)
   printer_on = False
 
-hostname = "archie"
 
 
-printer_on = False
-while (True):
-  response = os.system("ping -c1 -W1 " + hostname)
-  if response == 0:
-    print "got response"
-    if not printer_on:
-      turn_on_printer()
+printer_on = GPIO.Input(PIN)
+response = os.system("ping -c1 -W1 " + "archie")
+if response == 0:
+  if not printer_on:
+    turn_on_printer()
 
-  else:
-    print "got no response"
-    if printer_on:
-      turn_off_printer()
-  time.sleep(10)
+else:
+  if printer_on:
+    turn_off_printer()
 
 
 
